@@ -1,0 +1,148 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/* Estilos de la vista HOME */
+.banner {
+  margin-top: 150px;
+  margin-bottom: 30px;
+  background-color: hwb(303 16% 22%);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.banner:hover {
+  background-color: hsl(0, 0%, 33%);
+}
+
+.banner p {
+  font-size: 32px;
+  font-weight: bold;
+  color: #fff;
+  margin: 10px 0 0;
+}
+
+/* Estilo para el link de la vista index para ir a crear un nuevo elemento */
+.link {
+  text-align: center;
+  display: block;
+  line-height: 50px;
+}
+
+ /* Estilos para el formulario */
+ h1, p {
+  line-height: 25 px;
+ }
+
+ .container_index, .container_new {
+  margin-top: 100px;
+  margin-bottom: 200px;
+ }
+ 
+.container_new {
+  margin-left: 200px;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 50%;
+  max-width: 500px;
+}
+
+.input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 20px;
+  border: none;
+}
+
+#movie_name, #movie_synopsis, #movie_director {
+  height: 32px;
+  padding-left: 20px;
+  border-radius: 32px;
+  width: 650px;
+}
+
+#movie_synopsis {
+  min-height: 100px;
+  padding-top: 20px;
+}
+
+#button {
+  width: 150px;
+  background-color: hsl(309, 100%, 71%);
+  color: white;
+  padding: 10px 20px;
+  margin-top: 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#button:hover {
+  background-color: hsl(309, 98%, 26%);
+}
+
+/* Estilos para los mensajes de alerta cuando no se ha agregado pelicula*/
+.alert {
+  color: red;
+}
+
+/* Estilos para la notificacion de que se agrego una pelicula con exito */
+.notificacion {
+  color: #26c538;
+  text-align: center;
+}
+
+.alert, .notificacion {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+ /*Estilos para las tablas*/
+ table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #f2f2f2;
+  }
+  
+  th {
+    background-color: #ff007f;
+    color: #fff;
+    font-weight: bold;
+    padding: 12px 15px;
+    text-align: center;
+  }
+  
+  td {
+    padding: 8px 15px;
+    text-align: center;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #ffebe7;
+  }
+  
+  tr:hover {
+    background-color: #ffc9c1;
+  }
+  

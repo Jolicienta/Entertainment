@@ -1,0 +1,41 @@
+<div class="container_new">
+    <h1>Peliculas</h1>
+
+    <p>Quieres ingresar una nueva pelicula a la lista? <br>
+    por favor rellena el siguiente formulario:</p>
+    <% if flash[:alert] %>
+        <div class="alert">
+            <%= flash[:alert] %>
+        </div>
+    <% end %>
+
+    <%= form_for @movie, url: movie_create_path, method: :post, html: { id: 'form' } do |f| %>
+        <%= f.label "Nombre:", class: 'input' %>
+        <%= f.text_field :name %><br />
+
+        <%= f.label "Synopsis:", class: 'input' %>
+        <%= f.text_area :synopsis %><br />
+
+        <%= f.label "Director:", class: 'input' %>
+        <%= f.text_field :director %><br />
+
+        <%= f.submit :Agregar, id: 'button' %>
+    <% end %>
+    <br>
+
+    <%= link_to 'Ir a Peliculas', movies_path, class: 'link', style: 'text-align: left;' %>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    let formulario = document.getElementById('form');
+    let botonEnvio = document.getElementById('button');
+
+    formulario.reset();
+
+    botonEnvio.addEventListener('click', function(event) {
+      formulario.submit(); // Enviar el formulario
+      location.reload(); // Recargar la página
+    });
+  });
+</script>

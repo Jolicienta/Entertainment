@@ -1,0 +1,30 @@
+<div class="container_index">
+    <h1 style="text-align: center;">Peliculas</h1>
+    <% if flash[:notice] %>
+        <div class="notificacion">
+            <%= flash[:notice] %>
+        </div>
+    <% end %>
+
+    <%= link_to 'Agrega una nueva pelicula', movie_new_path, class: 'link' %>
+
+    <table>
+    <thead>
+        <tr>
+        <th>Pelicula</th>
+        <th>Sinopsis</th>
+        <th>Director</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <% @movies.sort.reverse.each do |movie| %>
+        <tr>
+            <td><%= movie.name %></td>
+            <td><%= movie.synopsis %></td>
+            <td><%= movie.director %></td>
+        </tr>
+        <% end %>
+    </tbody>
+    </table>
+</div>
